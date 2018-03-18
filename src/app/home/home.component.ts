@@ -37,7 +37,13 @@ export class HomeComponent implements OnInit {
 
   btnText: string = 'Add an Item'; 
 
-  goalText: string = '';
+  IdNumber: number;
+
+  FullBackupTime: string;
+
+  DifferentialBackupTime: string;
+  
+  InkrementalBackupTime: string;
 
   goals = [];
 
@@ -51,8 +57,11 @@ export class HomeComponent implements OnInit {
   }
 
   addItem() {
-    this.goals.push(this.goalText);
-    this.goalText = '';
+    this.goals.push(this.IdNumber + ", " + this.FullBackupTime + ", " + this.DifferentialBackupTime + ", " + this.InkrementalBackupTime);
+    this.IdNumber = null;
+    this.DifferentialBackupTime = '';
+    this.FullBackupTime = '';
+    this.InkrementalBackupTime = '';
     this.itemCount = this.goals.length;
     this._data.changeGoal(this.goals);
   }
