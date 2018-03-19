@@ -1,6 +1,9 @@
 
     <div class="col">
-      <p class="life-container" *ngFor="let goal of goals">
-        Deamon {{ IdNumber }}: {{ goal }}
+      <p class="life-container" *ngFor="let goal of goals; let i = index">
+        Deamon {{ goal[i] }}: {{ goal }}
       </p>
     </div>
+
+
+  

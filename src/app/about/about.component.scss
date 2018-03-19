@@ -33,3 +33,7 @@ input.btn {
     font-weight:bold;
     cursor:pointer;
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
